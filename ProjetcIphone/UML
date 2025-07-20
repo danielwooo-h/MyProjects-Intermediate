@@ -1,0 +1,35 @@
+classDiagram
+direction TB
+    class IReprodutorMusical {
+	    +Tocar()
+	    +Pausar()
+	    +SelecionarMusica(String Musica)
+    }
+
+    class IAparelhoEletronico {
+	    +Ligar(String Numero)
+	    +Atender()
+	    +IniciarCorreioVoz()
+    }
+
+    class INavegadorNaInternet {
+	    +Exibirpagina(String url)
+	    +ExibirNovaAba()
+	    +atualizarpagina()
+    }
+
+    class IPhone {
+	    +AtualizarPagina
+	    +Tocar()
+	    +Pausar()
+	    +SelecionarMusica(String Musica)
+	    +Ligar(String Numero)
+	    +Atender()
+	    +IniciarCorreioVoz()
+	    +ExibirPagina(String url)
+	    +AdicionarNovaAba()
+    }
+
+IPhone --> IReprodutorMusical
+IPhone --> IAparelhoEletronico
+IPhone --> INavegadorNaInternet
